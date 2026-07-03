@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.15 0.01 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 260);
+  --border: oklch(0.91 0.005 260);
+  --muted: oklch(0.96 0.003 260);
+  --muted-foreground: oklch(0.48 0.01 260);
+  --primary: oklch(0.55 0.2 265);
+  --primary-foreground: oklch(0.98 0 0);
+  --danger: oklch(0.58 0.22 25);
+  --warning: oklch(0.6 0.19 55);
+  --success: oklch(0.6 0.15 150);
+  --overlay: oklch(0.15 0.01 260 / 0.55);
+}
+
+.dark {
+  --background: oklch(0.16 0.012 260);
+  --foreground: oklch(0.95 0.005 260);
+  --card: oklch(0.19 0.012 260);
+  --card-foreground: oklch(0.95 0.005 260);
+  --border: oklch(0.3 0.012 260);
+  --muted: oklch(0.24 0.01 260);
+  --muted-foreground: oklch(0.68 0.01 260);
+  --primary: oklch(0.68 0.19 265);
+  --primary-foreground: oklch(0.12 0.01 260);
+  --danger: oklch(0.66 0.2 25);
+  --warning: oklch(0.72 0.17 60);
+  --success: oklch(0.68 0.15 150);
+  --overlay: oklch(0 0 0 / 0.65);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+}
+
+.promptshield-root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  color: var(--color-foreground);
+  line-height: 1.45;
+}
+
+.promptshield-root * {
+  box-sizing: border-box;
+}
+
+@keyframes promptshield-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes promptshield-scale-in {
+  from { opacity: 0; transform: scale(0.96) translateY(4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes promptshield-slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ps-anim-overlay { animation: promptshield-fade-in 160ms ease-out; }
+.ps-anim-modal { animation: promptshield-scale-in 180ms cubic-bezier(0.16, 1, 0.3, 1); }
+.ps-anim-toast { animation: promptshield-slide-up 220ms cubic-bezier(0.16, 1, 0.3, 1); }
