@@ -193,14 +193,14 @@ changes.
   |  -> Redactor -> Audit Logger                                    |
   +--------------------------------|---------------------------------+
                                     v
-                        +-----------------------+
+                        +------------------------+
                         |       MySQL 8.4        |
-                        |  users, audit_logs      |
-                        |   (+ file metadata),     |
-                        |  policies,                |
-                        |  company_keywords,         |
-                        |  org_settings                |
-                        +-----------------------+
+                        |  users, audit_logs     |
+                        |   (+ file metadata),   |
+                        |  policies,             |
+                        |  company_keywords,     |
+                        |  org_settings          |
+                        +------------------------+
 ```
 
 Every detector returns the same `DetectionResult` shape (`detector`,
