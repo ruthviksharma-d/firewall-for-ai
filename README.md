@@ -1,4 +1,4 @@
-# PromptShield AI
+# PromptShield 
 
 **The AI firewall for teams using ChatGPT, Claude & Gemini.**
 
